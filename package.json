@@ -1,0 +1,15 @@
+{ 
+  "name": "LOSSH",
+  "version": "0.1.0",
+  "author": "Passionke",
+  "description": "view log based on web",
+  "main": "index",
+  "engines": { "node": ">=0.8.7" },
+  "dependencies": {
+    "ssh2": "0.2.11",
+    "express.io": "*"
+  },
+  "keywords": [ "ssh", "ssh2", "sftp", "secure", "shell", "exec", "remote", "client" ],
+  "licenses": [ { "type": "MIT", "url": "http://github.com/mscdex/ssh2/raw/master/LICENSE" } ],
+  "repository" : { "type": "git", "url": "https://github.com/passionke/LOSSH.git" }
+}
