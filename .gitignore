@@ -216,3 +216,5 @@ pip-log.txt
 
 #node modules
 node_modules
+#ideal
+.idea

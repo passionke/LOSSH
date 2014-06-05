@@ -1,0 +1,42 @@
+
+<html>
+<style>
+  h1 {
+    margin-bottom: 20px;
+    font: 20px/1.5 sans-serif;
+  }
+
+  .terminal {
+    float: left;
+    border: #000 solid 5px;
+    font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+    font-size: 11px;
+    color: #f0f0f0;
+    background: #000;
+  }
+
+  .reverse-video {
+    color: #000;
+    background: #f0f0f0;
+  }
+</style>
+<script src="/socket.io/socket.io.js"></script>
+<script src="term.js"></script>
+
+<body>
+</body>
+</html>
+<script>
+    var cols=40;
+    var rows=100;
+    var term_count=0;
+    var term = new Terminal(rows, cols);
+    term.on('data', function (data) {
+        console.log(data);
+        term.write(data)
+    });
+
+    term.open();
+    term.write("ssh");
+    term.send("ssh");
+</script>

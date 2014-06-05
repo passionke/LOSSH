@@ -29,6 +29,9 @@
     var rows=100;
     var term_count=0;
 
+    var term = new Terminal(rows, cols);
+
+
     socket.emit('host', "${host}")
 
     socket.on('get-password', function () {
@@ -42,7 +45,6 @@
 
 
     socket.on('create-term', function () {
-        var term = new Terminal(rows, cols);
         term_count++;
         options = { Rows: rows, Cols: cols, Terms: term_count };
         socket.emit('create-ssh', options);

@@ -38,7 +38,7 @@ app.use(express.static(__dirname));
 
 app.get('/', function (req, res) {
     req.session.loginDate = new Date().toString()
-    res.sendfile(__dirname + '/client.html?smHost=' + req.query.smHost)
+    // res.sendfile(__dirname + '/client.html?smHost=' + req.query.smHost)
 })
 
 
